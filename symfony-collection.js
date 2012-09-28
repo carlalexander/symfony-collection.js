@@ -37,12 +37,16 @@
       this.count = $(this.elementId + ' > div').length
     }
 
-    if (typeof this.options.index === 'number' && this.options.index % 1 == 0) {
-      this.options.index = 0;
+    if (this.options.limit && !this.isInt(this.options.limit)) {
+      this.options.limit = $.fn.collection.defaults.limit
+    }
+
+    if (!this.isInt(this.options.index)) {
+      this.options.index = $.fn.collection.defaults.index
     }
 
     if (this.options.index < this.count) {
-      this.options.index = this.cout
+      this.options.index = this.count
     }
   };
 
@@ -81,6 +85,10 @@
         }
 
         this.count--
+      }
+
+    , isInt: function(value) {
+        return typeof value === 'number' && value % 1 == 0
       }
   };
 

@@ -22,7 +22,7 @@ The following example replicates the behavior from the cookbook article.
 	    ...
 	</ul>
 
-It also also automatically detects if you are using a `div` or `ul for your container.
+It also also automatically detects if you are using a `div` or `ul` for your container.
 
 	<-- Button to add tag -->
 	<button id="add_tag" type="button" data-add="collection" data-target="#tags">Add tag</button>
@@ -38,7 +38,7 @@ If you have used [bootstrap](http://twitter.github.com/bootstrap) jQuery librari
 
 ### Adding an item
 
-To define a controller element, simply add `data-add="collection"` with either `data-target="#tags"` or `href="#tags" to target the container.
+To define a controller element, simply add `data-add="collection"` with either `data-target="#tags"` or `href="#tags"` to target the container.
 
 ### Removing an item
 
@@ -51,14 +51,14 @@ To remove an item, your collection simply needs a controller element with `data-
 
 A collection container is either a `div` or `ul` using the `data-prototype` from Symfony.
 
-### Options
+## Options
 
 You can define additonal options using data attributes. Simply append the option name to `data-`, as in `data-limit=""`.
 
-#### Limit
+### Limit
 
-Used to limit the number of items that can be inside the collection. Default: 0 (unlimited)
+Used to limit the number of items that can be inside the collection. _Must be an int._ Default: 0 (unlimited)
 
-#### Index
+### Index
 
-Used to set the intial index value. _Must be an int._ Default: 0
+Used to set the intial index value. This allows your collection form to work properly when the form is submitted, _Must be an int._ Default: 0
