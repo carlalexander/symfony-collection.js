@@ -22,7 +22,7 @@ The following example replicates the behavior from the cookbook article.
 	    ...
 	</ul>
 
-It also also automatically detects if you are using a `div` or `ul for your container.
+It also also automatically detects if you are using a `div` or `ul` for your container.
 
 	<-- Button to add tag -->
 	<button id="add_tag" type="button" data-add="collection" data-target="#tags">Add tag</button>
