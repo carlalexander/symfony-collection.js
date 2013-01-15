@@ -42,7 +42,7 @@ To define a controller element, simply add `data-add="collection"` with either `
 
 ### Removing an item
 
-To remove an item, your collection simply needs a controller element with `data-remove="collection"`.
+To remove an item, your collection simply needs a controller element with `data-remove="collection"` inside the prototype.
 
 	<-- Button to remove a tag -->
 	<button type="button" class="close" data-remove="collection" aria-hidden="true">&times;</button>
